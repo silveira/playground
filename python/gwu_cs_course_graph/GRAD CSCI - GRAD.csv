@@ -1,0 +1,58 @@
+ID,Course,Prerequisite
+6212,Design and Analysis of Algorithms,"1311, 1112"
+6213,Advanced Data Structures,6212
+6221,Advanced Software Paradigms,"1311, 1112"
+6231,Software Engineering,"6221, 612 "
+6232,Software Engineering Development,"6461, 6212"
+6233,Software Testing and Quality,6231
+6234,Object-Oriented Design,6221
+6235,Component-Based Enterprise Software Development ,6221
+6311,Theory of Computation,"6221, 6212"
+6312,Graph Theory and Applications,6212
+6313,Advanced Discrete Structures,"1311, 1232"
+6318,Complex Systems,6212
+6331,Cryptography,6212
+6341,Continuous Algorithms,"1311, 2113"
+6343,Numerical Solutions of Algebraic Systems,6212
+6351,Data Compression,6212
+6421,Distributed and Cluster Computing,6461
+6431,Computer Networks,6461
+6433,Internet Protocols,"6221, 6431"
+6434,Design of Internet Protocols,"6212, 6433"
+6441,Database Management Systems,"6221, 6461"
+6442,Database Systems,6441
+6443,Data Mining,6441
+6448,Scientific Databases and Knowledge Formation,"1311, 1132, 1112"
+6451,Information Retrieval Systems,"6221, 6461"
+6461,Computer Architectures,"1311, 1112, 2461"
+6511,Artificial Intelligence,"4511, 6212"
+6512,Adaptive Learning Systems I,"1311, 1112, 2461"
+6515,Natural Language Understanding,"4511, 6212"
+6519,Models of Cognition,"4511, 6212"
+6531,Computer Security ,6461
+6534,Information Security in Government
+6541,Network Security ,6531
+6542,Computer Network Defense,6541
+6547,Wireless and Mobile Security,"6431, 6531"
+6548,E-commerce Security,6541
+6554,Computer Graphics II,4554
+6555,Computer Animation ,4554
+6561,Design of Human-Computer Interface,6221
+6562,Design of Interactive Multimedia ,6221
+6572,Computational Biology Algorithms,6212
+6900,Colloquium
+6907,Special Topics
+6908,Research
+8211,Advanced Topics in Algorithms ,6212
+8231,Advanced Topics in Software Engineering,"6232, 6233"
+8331,Advanced Cryptography,6331
+8401,Advanced Topics in Systems
+8431,Advanced Topics in Computer Networks and Networked Computing
+8440,Advanced Topics in Data Management," 6461, 6212, 6433"
+8511,Advanced Topics in Artificial Intelligence,"6442, 6451"
+8531,Advanced Topics in Security,6531
+8554,Advanced Topics in Computer Graphics,6554
+8900,Advanced Selected Topics
+8901,Research and Evaluation Methods,3115
+8998,Computer Science Research
+8999,Dissertation Research
