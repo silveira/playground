@@ -21,18 +21,48 @@ for row in reader:
 			item[name] = value.strip()
 	courses.append(item)
 
+def to_dot():
+	# Convert this structure into a dot file.
+	# First the labels and so the dependencies.
+	print "digraph G {"
+	
+	for course in courses:
+		print "\t%s [label=\"%s (%s)\"];" % (course['ID'], course['Course'], course['ID'])
 
-# Convert this structure into a dot file.
-# First the labels and so the dependencies.
-print "digraph G {"
+	for course in courses:
+		if(course.has_key('Prerequisite')):
+			prereqs = map(int, course['Prerequisite'].split(',')) # '6232, 6233' to [6232, 6233]
+			for req in prereqs:
+				print "\t%s -> %s;" % (req, course['ID'])
 
-for course in courses:
-	print "\t%s [label=\"%s (%s)\"];" % (course['ID'], course['Course'], course['ID'])
+	print "}"
 
-for course in courses:
-	if(course.has_key('Prerequisite')):
-		prereqs = map(int, course['Prerequisite'].split(',')) # '6232, 6233' to [6232, 6233]
-		for req in prereqs:
-			print "\t%s -> %s;" % (req, course['ID'])
+# see https://github.com/strathausen/dracula
+def to_dracula():
+	print '''
+$(document).ready(function() {
+	var width = $(document).width();
+	var height = $(document).height();
+	var g = new Graph();
+	g.edgeFactory.template.style.directed = true;	
+	'''
 
-print "}"
+	for course in courses:
+		print "\tg.addNode(\"%s\");" % (course['ID'])
+
+        for course in courses:
+                if(course.has_key('Prerequisite')):
+                        prereqs = map(int, course['Prerequisite'].split(',')) # '6232, 6233' to [6232, 6233]
+                        for req in prereqs:
+                                print "\tg.addEdge(\"%s\", \"%s\");" % (req, course['ID'])
+	print '''
+	var layouter = new Graph.Layout.Ordered(g, topological_sort(g));
+	var renderer = new Graph.Renderer.Raphael('canvas', g, width, height);
+});
+''';
+
+
+# to_dot()
+
+to_dracula()
+
