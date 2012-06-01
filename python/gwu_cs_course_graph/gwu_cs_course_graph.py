@@ -27,7 +27,8 @@ def to_dot():
 	print "digraph G {"
 	
 	for course in courses:
-		print "\t%s [label=\"%s (%s)\"];" % (course['ID'], course['Course'], course['ID'])
+		label = course['Course'].replace(" ","\\n")
+		print "\t%s [label=\"%s (%s)\"];" % (course['ID'], label, course['ID'])
 
 	for course in courses:
 		if(course.has_key('Prerequisite')):
@@ -62,7 +63,6 @@ $(document).ready(function() {
 ''';
 
 
-# to_dot()
-
-to_dracula()
+to_dot()
+#to_dracula()
 
