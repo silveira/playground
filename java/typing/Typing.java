@@ -16,8 +16,8 @@ public class Typing {
 		B b = new B();
 		A c = new B(); 
 
-		System.out.println(a.foo());
-		System.out.println(b.foo());
-		System.out.println(c.foo());
+		System.out.println(a.foo()); // A
+		System.out.println(b.foo()); // B
+		System.out.println(c.foo()); // B
 	}
 }
