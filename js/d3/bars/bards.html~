@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Bars Graph</title>
+<script type="text/javascript" src="../d3.v2.min.js"></script>
+<style type='text/css'>
+.chart div {
+   font: 10px sans-serif;
+   background-color: steelblue;
+   text-align: right;
+   padding: 3px;
+   margin: 1px;
+   color: white;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+var data = [4, 8, 15, 16, 23, 42];
+var chart = d3.select("body").append("div").attr("class", "chart");
+</script>
+</body>
+</html>
+
