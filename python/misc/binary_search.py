@@ -22,3 +22,7 @@ if __name__ == '__main__':
     print l, k
     print binary_search(l, k, 0, len(l))
 
+# >>> 
+# [4, 7, 9, 28, 35, 40, 60, 65, 65, 80] 28
+# 3
+
