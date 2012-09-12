@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 
-
 # recursive binary search
 def binary_search_r(array, key, low, high):
 	if(low>high):
 		return None
-
 	mid = (low+high)/2
-
 	if array[mid]==key:
 		return mid
 	elif array[mid]>key:
@@ -38,7 +35,7 @@ if __name__ == '__main__':
 	print binary_search_r(l, k, 0, len(l))
 	print binary_search_nr(l, k)
 
+# Example:
 # >>> 
 # [4, 7, 9, 28, 35, 40, 60, 65, 65, 80] 28
 # 3
-
