@@ -19,6 +19,10 @@ def merge(left, right):
 	return result
 
 def mergesort(array):
+	"""
+	>>> mergesort([3,1,4,1,5,9,2,6,5])
+	[1, 1, 2, 3, 4, 5, 5, 6, 9]
+	"""
 	if len(array)==0 or len(array)==1:
 		return array
 	elif len(array)==2:
