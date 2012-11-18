@@ -25,12 +25,14 @@ graph = {
 def bfs(graph, root):
     queue = [root]
     visited = {root:True}
+    order = []
     while(len(queue)!=0):
         node = queue.pop(0)
-        print node
+        order.append(node)
         for neighbor in graph[node]:
             if(not visited.has_key(neighbor)):
                 queue.append(neighbor)
                 visited[neighbor] = True
+    return order
 
-bfs(graph, 'A')
+print bfs(graph, 'A')
