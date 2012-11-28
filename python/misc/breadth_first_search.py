@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 
-"""
-graph = {
-    'A': ['B', 'C'],
-    'B': ['D', 'A', 'C'],
-    'C': ['A', 'D', 'E', 'B'],
-    'D': ['B', 'C', 'E'],
-    'E': ['C', 'D']
-}
-"""
-
+# Example used in class
 graph = {
     'A': ['B', 'C', 'F'],
     'B': ['C', 'A', 'D', 'E'],
@@ -22,6 +13,7 @@ graph = {
     'H': ['G', 'F']
 }
 
+# Breadth First Search
 def bfs(graph, root):
     queue = [root]
     visited = {root:True}
@@ -35,4 +27,6 @@ def bfs(graph, root):
                 visited[neighbor] = True
     return order
 
-print bfs(graph, 'A')
+if __name__ == '__main__':
+	print bfs(graph, 'A')
+	# ['A', 'B', 'C', 'F', 'D', 'E', 'G', 'H', 'I']
