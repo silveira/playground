@@ -34,6 +34,7 @@ def postorder(graph, root):
     else:
         return postorder(graph, graph[root][LEFT]) + postorder(graph, graph[root][RIGHT]) + [root]
 
-print preorder(example_graph, 'A')
-print inorder(example_graph, 'A')
-print postorder(example_graph, 'A')
+if __name__ == '__main__':
+    print preorder(example_graph, 'A')
+    print inorder(example_graph, 'A')
+    print postorder(example_graph, 'A')
