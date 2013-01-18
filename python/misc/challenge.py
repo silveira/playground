@@ -8,7 +8,9 @@ c = "A QEFP FP QEB CFOPQ QBUQ XXXXX    "
 # count how many letters we have in the alphabet
 n = ord('Z') - ord('A')
 
-for k in xrange(n+1):
+# foreach possible key
+for k in xrange(n):
+    # apply the key on each letter s
     print k,
     for letter in c:
       if letter != ' ':
