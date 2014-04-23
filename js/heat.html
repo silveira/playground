@@ -1,0 +1,45 @@
+<html>
+<head>
+<script type="application/javascript">
+
+function create_map(width, height) {
+    var map = new Array(height);
+    for(var i = 0; i < height; i++){
+        map[i] = new Array(width);
+    }
+    return map;
+}
+
+function draw_map(map, map_width, map_height) {
+    var canvas = document.getElementById('canvas');
+    var width = canvas.width;
+    var height = canvas.height;
+    if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+        
+        ctx.fillStyle = "rgb(0,0,0)";
+        ctx.fillRect (0, 0, width, height);
+
+        ctx.fillStyle = "rgb(255, 255, 255)";
+        for(var row = 0; row < map_height; row++) {
+            for(var col = 0; col < map_width; col++){
+                ctx.fillRect (col*10, row*10, 10, 10);
+            }
+        }
+    }
+}
+
+function main() {
+    var map_w = 100;
+    var map_h = 50;
+    var map = create_map(map_w map_h);
+    draw_map(map, map_w, map_h);
+}
+
+</script>
+</head>
+
+<body onload="main();">
+    <canvas id="canvas" width="640" height="480"></canvas>
+</body>
+</html>
